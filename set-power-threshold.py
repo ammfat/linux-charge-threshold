@@ -5,7 +5,6 @@ class SetPower:
 		self.power_cfg = power_cfg
 
 	def getCurrentThreshold(self):
-		print(self.power_cfg)
 		with open(self.power_cfg, "r") as power_cfg:
 			print("Current Threshold\t:", power_cfg.read())
 	
@@ -17,8 +16,7 @@ class SetPower:
 			except ValueError:
 				input("[ERROR] Wrong Input Format!")
 		
-		self.newThreshold = str(newThreshold)		
-		print(self.newThreshold, type(self.newThreshold))
+		self.newThreshold = str(newThreshold)
 
 	def setNewThreshold(self):
 		with open(self.power_cfg, "w") as power_cfg:
@@ -37,3 +35,4 @@ def main():
 
 if __name__ == '__main__':
 	main()
+
